@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lightspeed Tools - Help</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #4a90e2;
+      margin-top: 0;
+      border-bottom: 3px solid #4a90e2;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #2c5aa0;
+      margin-top: 30px;
+      border-left: 4px solid #4a90e2;
+      padding-left: 15px;
+    }
+
+    h3 {
+      color: #555;
+      margin-top: 20px;
+    }
+
+    .feature {
+      background-color: #f8f9fa;
+      border-left: 4px solid #4a90e2;
+      padding: 15px 20px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #4a90e2;
+    }
+
+    .warning {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .info {
+      background-color: #d1ecf1;
+      border-left: 4px solid #17a2b8;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .logo {
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #999;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">⚡</div>
+    <h1>Lightspeed Tools - User Guide</h1>
+
+    <p>Welcome to Lightspeed Tools! This extension enhances your Lightspeed Retail experience with powerful automation and productivity features.</p>
+
+    <h2>🎯 Features</h2>
+
+    <div class="feature">
+      <h3>⏱️ Billing Time Tracker</h3>
+      <p>Automatically calculates and tracks allotted time based on labor costs.</p>
+      <ul>
+        <li><strong>Allotted Time:</strong> Shows how much time you have for the job based on labor value and billing rate</li>
+        <li><strong>Countdown Timer:</strong> Start/Pause timer to track actual time spent</li>
+        <li><strong>Current Billing Rate:</strong> See your effective $/hr rate as you work</li>
+        <li><strong>Customize Rate:</strong> Set your own billing rate goal (default: $100/hr)</li>
+        <li><strong>Reset Timer:</strong> Start over if needed</li>
+        <li><strong>Done Button:</strong> Mark job complete and reset timer</li>
+      </ul>
+      <p><em>The billing tracker appears at the bottom of workorder pages.</em></p>
+    </div>
+
+    <div class="feature">
+      <h3>💾 Auto-Save</h3>
+      <p>Automatically saves workorder line edits without collapsing the UI.</p>
+      <ul>
+        <li>Saves on every keypress or click</li>
+        <li>Rate-limited to once every 2 seconds per line</li>
+        <li>No more clicking Save/Cancel buttons</li>
+        <li>Shimmer animation shows auto-save is active</li>
+        <li>Save button replaced with "Close" button</li>
+      </ul>
+      <p><em>Works seamlessly in the background while you edit workorder lines.</em></p>
+    </div>
+
+    <div class="feature">
+      <h3>🔓 Auto PIN Unlock</h3>
+      <p>Eliminates annoying PIN lock screens during work.</p>
+      <ul>
+        <li><strong>Prevents idle timeouts:</strong> No more auto-lock from inactivity</li>
+        <li><strong>Auto-fills PIN:</strong> When verification is needed (like creating a new sale), your PIN is entered automatically</li>
+        <li><strong>Manual locks still work:</strong> If you intentionally lock the screen, it stays locked</li>
+        <li><strong>Privacy first:</strong> PIN stored locally on your machine only</li>
+      </ul>
+      <div class="warning">
+        <strong>⚠️ Security Note:</strong> Your PIN is stored in Chrome's sync storage. Only enable this feature on trusted devices. Manual locks (clicking the lock button) are still respected.
+      </div>
+    </div>
+
+    <div class="feature">
+      <h3>📝 Textarea Auto-Resize</h3>
+      <p>Internal notes and customer notes automatically resize to fit content.</p>
+      <ul>
+        <li>Synced heights between note fields</li>
+        <li>Auto-expands up to 500px</li>
+        <li>Shows scrollbar only when needed</li>
+      </ul>
+    </div>
+
+    <div class="feature">
+      <h3>📋 Workorder History</h3>
+      <p>Quick access to recently visited workorders.</p>
+      <ul>
+        <li>Stores last 50 workorders visited</li>
+        <li>Shows time since last visit</li>
+        <li>Click to open in new tab</li>
+        <li>Clear history anytime</li>
+      </ul>
+      <p><em>Access from the extension popup menu.</em></p>
+    </div>
+
+    <div class="feature">
+      <h3>📄 Dynamic Page Titles</h3>
+      <p>Browser tabs show customer and item names instead of generic titles.</p>
+      <ul>
+        <li>Format: "Customer Name - Item Name"</li>
+        <li>Shows "New Bike" if no item selected</li>
+        <li>Makes finding the right tab easier</li>
+      </ul>
+    </div>
+
+    <h2>⚙️ Settings</h2>
+
+    <p>Access settings by clicking the Lightspeed Tools icon in your Chrome toolbar.</p>
+
+    <h3>Feature Toggles</h3>
+    <ul>
+      <li><strong>Billing Tracking:</strong> Show/hide the billing time tracker</li>
+      <li><strong>Auto-Save:</strong> Enable/disable automatic workorder saving</li>
+      <li><strong>Auto PIN Unlock:</strong> Enable/disable automatic PIN entry</li>
+    </ul>
+
+    <h3>PIN Configuration</h3>
+    <p>Only visible when Auto PIN Unlock is enabled.</p>
+    <ul>
+      <li>Enter your Lightspeed PIN</li>
+      <li>Click "Save PIN" to store it</li>
+      <li>PIN is encrypted and stored locally</li>
+    </ul>
+
+    <div class="info">
+      <strong>🔒 Privacy:</strong> This extension stores data only locally on your machine. No data is sent to our servers. We don't even have servers.
+    </div>
+
+    <h2>💡 Tips & Tricks</h2>
+
+    <ul>
+      <li><strong>Billing Timer:</strong> Click the ⚙ gear icon to access Customize Rate and Reset options</li>
+      <li><strong>Auto-Save:</strong> Watch for the shimmer animation to confirm auto-save is working</li>
+      <li><strong>PIN Security:</strong> Use a strong PIN and only enable auto-unlock on trusted devices</li>
+      <li><strong>Workorder History:</strong> Quickly jump back to recent jobs without searching</li>
+    </ul>
+
+    <h2>🐛 Troubleshooting</h2>
+
+    <h3>Auto-save not working?</h3>
+    <ul>
+      <li>Check that Auto-Save is enabled in settings</li>
+      <li>Look for the shimmer animation on "Auto Saving with Lightspeed Tools..."</li>
+      <li>Reload the page to restart the extension</li>
+    </ul>
+
+    <h3>PIN still prompting?</h3>
+    <ul>
+      <li>Verify Auto PIN Unlock is enabled</li>
+      <li>Make sure you've saved your PIN</li>
+      <li>Check console for "[Lightspeed Tools]" messages</li>
+      <li>Manual locks (clicking lock button) will still require PIN</li>
+    </ul>
+
+    <h3>Billing tracker not showing?</h3>
+    <ul>
+      <li>Ensure you're on a workorder page (URL contains <code>beta_workorder</code>)</li>
+      <li>Check that Billing Tracking is enabled in settings</li>
+      <li>Look at the bottom of the workorder totals section</li>
+    </ul>
+
+    <h2>🔧 Technical Details</h2>
+
+    <p>For developers and curious users:</p>
+    <ul>
+      <li><strong>Manifest Version:</strong> 3</li>
+      <li><strong>Permissions:</strong> activeTab, tabs, storage</li>
+      <li><strong>Host:</strong> https://us.merchantos.com/*</li>
+      <li><strong>Storage:</strong> Chrome sync storage (encrypted)</li>
+      <li><strong>Context:</strong> Content scripts + page context injection</li>
+    </ul>
+
+    <h2>📞 Support</h2>
+
+    <p>Questions or issues? This is a custom extension for your specific use. Contact your system administrator or the extension developer for assistance.</p>
+
+    <div class="footer">
+      <p>⚡ Lightspeed Tools v1.0.0</p>
+      <p>🤖 Generated with <a href="https://claude.com/claude-code" target="_blank">Claude Code</a></p>
+      <p>Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;</p>
+    </div>
+  </div>
+</body>
+</html>

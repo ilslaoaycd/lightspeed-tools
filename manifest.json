@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Lightspeed Tools",
+  "version": "1.0.0",
+  "description": "Productivity toolkit for Lightspeed Retail: auto-save, billing tracker, PIN unlock, and workflow enhancements for mechanics and service professionals.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://us.merchantos.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://us.merchantos.com/*"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css", "inject.js"],
+      "matches": ["https://us.merchantos.com/*"]
+    }
+  ]
+}
